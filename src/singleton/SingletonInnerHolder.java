@@ -21,6 +21,11 @@ public class SingletonInnerHolder {
 		private static final SingletonInnerHolder INSTANCE = new SingletonInnerHolder();
 	}
 
+	// 有几个内部类，生成几个class文件
+	private static class Singletonbhhbh {
+		private static final SingletonInnerHolder INSTANCE = new SingletonInnerHolder();
+	}
+
 	private SingletonInnerHolder() {
 	}
 
