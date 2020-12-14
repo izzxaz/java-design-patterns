@@ -1,5 +1,14 @@
 package builder;
+/**
+ * effectiveJava中提到的一种更轻量级的Builder模式使用方式，更容易在我们的代码中使用
+ */
 
+/**
+ * 3 最终获得的Computer对象，即 传统的产品
+ * 
+ * @author zhangxiansheng
+ *
+ */
 public class Computer {
 	private final String cpu;// 必须
 	private final String ram;// 必须
@@ -7,6 +16,11 @@ public class Computer {
 	private final String keyboard;// 可选
 	private final String display;// 可选
 
+	/**
+	 * 1 私有构造方法 即 传统的装机员
+	 * 
+	 * @param builder
+	 */
 	private Computer(Builder builder) {
 		this.cpu = builder.cpu;
 		this.ram = builder.ram;
@@ -15,6 +29,12 @@ public class Computer {
 		this.display = builder.display;
 	}
 
+	/**
+	 * 2 静态内部类 即 传统的装机单
+	 * 
+	 * @author zhangxiansheng
+	 *
+	 */
 	public static class Builder {
 		private String cpu;// 必须
 		private String ram;// 必须
